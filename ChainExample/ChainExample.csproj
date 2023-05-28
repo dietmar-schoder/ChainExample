@@ -10,4 +10,9 @@
     <AnalysisLevel>none</AnalysisLevel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Schoder.Chain" Version="2.1.0" />
+    <PackageReference Include="SlackBotMessages" Version="2.1.0" />
+  </ItemGroup>
+
 </Project>
