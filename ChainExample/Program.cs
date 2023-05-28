@@ -20,12 +20,18 @@ builder.Services.AddScoped<IProcessor, ValidateDataInput>();
 
 var app = builder.Build();
 
-var errorRedirect = Results.Redirect("/error");
+var userErrorPage = "/error";
+var userErrorRedirect = Results.Redirect(userErrorPage);
 
 var bookingsEndpoint = "/bookings";
-app.MapGet(bookingsEndpoint, (IBookingManager bookingManager) =>
+app.MapGet(bookingsEndpoint, async (IBookingManager bookingManager) =>
 {
-    return bookingManager.ConfirmBookingAsync(bookingsEndpoint, errorRedirect);
+    return await bookingManager.ConfirmBookingAsync(bookingsEndpoint, userErrorRedirect);
+});
+
+app.MapGet(userErrorPage, () =>
+{
+    return Results.Empty;
 });
 
 app.Run();
