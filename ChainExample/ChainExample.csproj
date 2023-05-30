@@ -11,8 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Schoder.Chain" Version="2.1.0" />
+    <PackageReference Include="Schoder.Chain" Version="2.2.0" />
     <PackageReference Include="SlackBotMessages" Version="2.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
 </Project>

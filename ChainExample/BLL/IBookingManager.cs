@@ -2,6 +2,6 @@
 {
     public interface IBookingManager
     {
-        Task<IResult> ConfirmBookingAsync(string calledBy, IResult redirectToErrorPage);
+        Task<IResult> ConfirmBookingAsync(string calledBy, object? userInput, IResult redirectToErrorPage);
     }
 }
