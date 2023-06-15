@@ -12,7 +12,7 @@ builder.Services.AddScoped<ISlackManager, SlackManager>();
 builder.Services.AddScoped<IChain, Chain>();
 
 builder.Services.AddScoped<IBookingManager, BookingManager>();
-builder.Services.AddSingleton<BookingData, BookingData>();
+builder.Services.AddScoped<BookingData, BookingData>();
 
 builder.Services.AddScoped<IProcessor, CalculateResult>();
 builder.Services.AddScoped<IProcessor, FetchFromDB1>();
